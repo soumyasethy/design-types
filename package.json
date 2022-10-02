@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "This package contains type definitions for @volt/component,@volt/schema, @volt/theme, @volt/platform and @volt/micro-frontend",
   "author": "soumyasethy <soumya.sethy@voltmoney.in>",
-  "homepage": "https://github.com/VOLTMoney/micro-frontend#readme",
+  "homepage": "https://github.com/VOLTMoney/design-type#readme",
   "license": "ISC",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -14,7 +14,7 @@
   "files": [
     "lib"
   ],
-  "repository": "ssh://git@github.com:VOLTMoney/micro-frontend.git",
+  "repository": "ssh://git@github.com:VOLTMoney/design-type.git",
   "scripts": {
     "setup": "npm i --legacy-peer-deps",
     "build": "tsc",
@@ -31,7 +31,7 @@
     "@types/react-native": "^0.70.4"
   },
   "bugs": {
-    "url": "https://github.com/VOLTMoney/design-component/issues"
+    "url": "https://github.com/VOLTMoney/design-type/issues"
   },
   "gitHead": "857fd575bbf509d7713cee0212d517f37af3b46d",
   "publishConfig": {
