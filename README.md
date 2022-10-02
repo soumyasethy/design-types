@@ -1,2 +1,2 @@
-# micro-frontend
-Micro frontends of Volt App for both Mobile and Web
+# @volt/types
+This package contains type definitions for @volt/component,@volt/schema, @volt/theme, @volt/platform and @volt/micro-frontend
