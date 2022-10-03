@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Component } from "react";
+import {Component, NamedExoticComponent, ReactNode} from "react";
 import { View } from "react-native";
 
 export type RouteMap = {
@@ -37,15 +37,15 @@ export type TemplateSchema = {
 
 export type WidgetRegistry = {
   [key: string]: {
-    Component?: JSX.Element;
+    Component?: any;
     Mock?: { args?: any; argsType?: any };
   };
 };
 
 export type WidgetProps = {
   item?: WidgetItem;
-  renderItem?: Component;
-  triggerAction?: TriggerAction;
+  renderItem?(item: WidgetItem): ReactNode;
+  triggerAction?(action: Action<any>): TriggerAction;
   /** Todo **/
   widgetRef?: React.RefObject<View>;
   action?: Action<any>;

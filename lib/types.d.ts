@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Component } from "react";
+import { ReactNode } from "react";
 import { View } from "react-native";
 export declare type RouteMap = {
     [routeId: string]: PageType<any>;
@@ -30,7 +30,7 @@ export declare type TemplateSchema = {
 };
 export declare type WidgetRegistry = {
     [key: string]: {
-        Component?: JSX.Element;
+        Component?: any;
         Mock?: {
             args?: any;
             argsType?: any;
@@ -39,8 +39,8 @@ export declare type WidgetRegistry = {
 };
 export declare type WidgetProps = {
     item?: WidgetItem;
-    renderItem?: Component;
-    triggerAction?: TriggerAction;
+    renderItem?(item: WidgetItem): ReactNode;
+    triggerAction?(action: Action<any>): TriggerAction;
     /** Todo **/
     widgetRef?: React.RefObject<View>;
     action?: Action<any>;
