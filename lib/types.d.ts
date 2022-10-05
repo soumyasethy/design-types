@@ -74,7 +74,7 @@ export declare type StandardUtilities = {
     };
     /** @description navigate to page  **/
     /** @param routeId as string from RouteMap **/
-    navigate(routeId: string): void;
+    navigate(routeId: string, params?: any): void;
     /** @description navigate to previous page  **/
     goBack(): void;
     showLoader(routeId: string, widgetItems: WidgetItem[]): void;
@@ -105,9 +105,9 @@ export declare type StandardUtilities = {
     galleryPicker(options?: CameraOptions): Promise<ImagePickerResponse>;
     recentFiles(path?: string): Promise<string[]>;
 };
-export declare type ActionFunction = (action: Action<any>, datastore: Datastore, utilities: StandardUtilities) => Promise<any> | any;
+export declare type ActionFunction<T> = (action: Action<T>, datastore: Datastore, utilities: StandardUtilities) => Promise<any> | any;
 export declare type ActionMap = {
-    [key: string]: ActionFunction;
+    [key: string]: ActionFunction<any>;
 };
 export declare type PageType<T> = {
     loading?: WidgetItem[];
