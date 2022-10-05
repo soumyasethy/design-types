@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Component, NamedExoticComponent, ReactNode} from "react";
+import { Component, NamedExoticComponent, ReactNode } from "react";
 import { View } from "react-native";
 
 export type RouteMap = {
@@ -91,7 +91,7 @@ export type StandardUtilities = {
   };
   /** @description navigate to page  **/
   /** @param routeId as string from RouteMap **/
-  navigate(routeId: string): void;
+  navigate(routeId: string, params?: any): void;
   /** @description navigate to previous page  **/
   goBack(): void;
   showLoader(routeId: string, widgetItems: WidgetItem[]): void;
