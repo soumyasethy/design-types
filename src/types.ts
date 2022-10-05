@@ -131,14 +131,14 @@ export type StandardUtilities = {
   recentFiles(path?: string): Promise<string[]>;
 };
 
-export type ActionFunction = (
-  action: Action<any>,
+export type ActionFunction<T> = (
+  action: Action<T>,
   datastore: Datastore,
   utilities: StandardUtilities
 ) => Promise<any> | any;
 
 export type ActionMap = {
-  [key: string]: ActionFunction;
+  [key: string]: ActionFunction<any>;
 };
 
 export type PageType<T> = {
