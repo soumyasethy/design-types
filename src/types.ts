@@ -61,25 +61,59 @@ export enum GlobalActionTokens {
 
 export type StandardUtilities = {
   network: {
-    get<T = any>(url: string, config?: object): Promise<T>;
-    post<T = any, D = any>(url: string, data?: D, config?: object): Promise<T>;
-    delete<T = any>(url: string, config?: object): Promise<T>;
-    put<T = any, D = any>(url: string, data?: D, config?: object): Promise<T>;
-    patch<T = any, D = any>(url: string, data?: D, config?: object): Promise<T>;
+    get<T = any>(
+      url: string,
+      config?: {
+        headers?: any;
+      }
+    ): Promise<T>;
+    post<T = any, D = any>(
+      url: string,
+      data?: D,
+      config?: {
+        headers?: any;
+      }
+    ): Promise<T>;
+    delete<T = any>(
+      url: string,
+      config?: {
+        headers?: any;
+      }
+    ): Promise<T>;
+    put<T = any, D = any>(
+      url: string,
+      data?: D,
+      config?: {
+        headers?: any;
+      }
+    ): Promise<T>;
+    patch<T = any, D = any>(
+      url: string,
+      data?: D,
+      config?: {
+        headers?: any;
+      }
+    ): Promise<T>;
     postForm<T = any, D = any>(
       url: string,
       data?: D,
-      config?: object
+      config?: {
+        headers?: any;
+      }
     ): Promise<T>;
     putForm<T = any, D = any>(
       url: string,
       data?: D,
-      config?: object
+      config?: {
+        headers?: any;
+      }
     ): Promise<T>;
     patchForm<T = any, D = any>(
       url: string,
       data?: D,
-      config?: object
+      config?: {
+        headers?: any;
+      }
     ): Promise<T>;
   };
   asyncStorage: {
