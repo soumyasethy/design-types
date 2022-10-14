@@ -61,14 +61,26 @@ export enum GlobalActionTokens {
 
 export type StandardUtilities = {
   network: {
-    get<T = any>(url: string): Promise<T>;
-    post<T = any, D = any>(url: string, data?: D): Promise<T>;
-    delete<T = any>(url: string): Promise<T>;
-    put<T = any, D = any>(url: string, data?: D): Promise<T>;
-    patch<T = any, D = any>(url: string, data?: D): Promise<T>;
-    postForm<T = any, D = any>(url: string, data?: D): Promise<T>;
-    putForm<T = any, D = any>(url: string, data?: D): Promise<T>;
-    patchForm<T = any, D = any>(url: string, data?: D): Promise<T>;
+    get<T = any>(url: string, config?: object): Promise<T>;
+    post<T = any, D = any>(url: string, data?: D, config?: object): Promise<T>;
+    delete<T = any>(url: string, config?: object): Promise<T>;
+    put<T = any, D = any>(url: string, data?: D, config?: object): Promise<T>;
+    patch<T = any, D = any>(url: string, data?: D, config?: object): Promise<T>;
+    postForm<T = any, D = any>(
+      url: string,
+      data?: D,
+      config?: object
+    ): Promise<T>;
+    putForm<T = any, D = any>(
+      url: string,
+      data?: D,
+      config?: object
+    ): Promise<T>;
+    patchForm<T = any, D = any>(
+      url: string,
+      data?: D,
+      config?: object
+    ): Promise<T>;
   };
   asyncStorage: {
     get: (
