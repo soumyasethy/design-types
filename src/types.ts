@@ -43,11 +43,8 @@ export type WidgetRegistry = {
 };
 
 export type WidgetProps = {
-  item?: WidgetItem;
   renderItem?(item: WidgetItem): ReactNode;
-  triggerAction?(action: Action<any>): TriggerAction;
-  /** Todo **/
-  widgetRef?: React.RefObject<View>;
+  triggerAction?: TriggerAction;
   action?: Action<any>;
 };
 
