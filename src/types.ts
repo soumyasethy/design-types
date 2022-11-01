@@ -9,7 +9,6 @@ export type RouteMap = {
 export type MicroFrontendProps = {
   routeMap: RouteMap;
   routeCurrent: string;
-  routeWithAuth?: string;
   widgetRegistry: WidgetRegistry;
   extraProps?: any;
 };
