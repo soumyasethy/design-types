@@ -57,6 +57,7 @@ export enum GlobalActionTokens {
   SET_ROUTE_MAP = "SET_ROUTE_MAP",
   SET_TEMPLATE_ROUTE = "SET_TEMPLATE_ROUTE",
   APPEND_WIDGETS = "APPEND_WIDGETS",
+  OPEN_CAMERA_WEB = "OPEN_CAMERA_WEB",
 }
 
 export type StandardUtilities = {
@@ -169,7 +170,10 @@ export type StandardUtilities = {
     datastore: Datastore,
     widgets: WidgetItem[]
   ): void;
-  cameraPicker(options?: CameraOptions): Promise<ImagePickerResponse>;
+  cameraPicker(
+    options?: CameraOptions,
+    routeId?: string
+  ): Promise<ImagePickerResponse>;
   galleryPicker(options?: CameraOptions): Promise<ImagePickerResponse>;
   recentFiles(path?: string): Promise<string[]>;
 };
