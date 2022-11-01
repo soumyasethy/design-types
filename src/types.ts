@@ -174,6 +174,7 @@ export type StandardUtilities = {
     options?: CameraOptions,
     routeId?: string
   ): Promise<ImagePickerResponse>;
+  takePicture(routeId: string): Promise<string>;
   galleryPicker(options?: CameraOptions): Promise<ImagePickerResponse>;
   recentFiles(path?: string): Promise<string[]>;
 };
