@@ -198,6 +198,8 @@ export type PageType<T> = {
   onEndReached?: (standardUtilities: StandardUtilities) => void;
   template?: TemplateSchema;
   actions?: ActionMap;
+  action?: Action<any>;
+  bgColor?: string;
 };
 
 /** An enum to select the layout of a screen */
