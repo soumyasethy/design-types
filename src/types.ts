@@ -1,6 +1,4 @@
-import * as React from "react";
-import { Component, NamedExoticComponent, ReactNode } from "react";
-import { View } from "react-native";
+import { ReactNode } from "react";
 
 export type RouteMap = {
   [routeId: string]: PageType<any>;
@@ -57,6 +55,7 @@ export enum GlobalActionTokens {
   SET_ROUTE_MAP = "SET_ROUTE_MAP",
   SET_TEMPLATE_ROUTE = "SET_TEMPLATE_ROUTE",
   APPEND_WIDGETS = "APPEND_WIDGETS",
+  REMOVE_WIDGETS = "REMOVE_WIDGETS",
   OPEN_CAMERA_WEB = "OPEN_CAMERA_WEB",
 }
 
@@ -170,6 +169,7 @@ export type StandardUtilities = {
     datastore: Datastore,
     widgets: WidgetItem[]
   ): void;
+  removeWidgets(routeId: string, widgets: WidgetItem[]): void;
   cameraPicker(
     options?: CameraOptions,
     routeId?: string
@@ -200,6 +200,7 @@ export type PageType<T> = {
   actions?: ActionMap;
   action?: Action<any>;
   bgColor?: string;
+  clearPrevious?: boolean;
 };
 
 /** An enum to select the layout of a screen */
@@ -220,6 +221,7 @@ export enum POSITION {
   FIXED_TOP = "position/fixed_top",
   /** The  widget is present at the top of the page in the default state */
   ABSOLUTE_TOP = "position/absolute_top",
+  ABSOLUTE_CENTER = "position/absolute_center",
   /** The widget is fixed to the bottom of the screen, and continues to appear even when you scroll up */
   FIXED_BOTTOM = "position/fixed_bottom",
   /** The  widget is present at the bottom of the page in the default state */
