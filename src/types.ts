@@ -178,10 +178,13 @@ export type StandardUtilities = {
   takePicture(routeId: string): Promise<string>;
   galleryPicker(options?: CameraOptions): Promise<ImagePickerResponse>;
   recentFiles(path?: string): Promise<string[]>;
-  handleError(response: {
-    message?: string;
-    statusCode?: string;
-  }): Promise<any>;
+  handleError(
+    response: {
+      message?: string;
+      statusCode?: string;
+    },
+    customMessage?: { success?: string; failed?: string }
+  ): Promise<any>;
 };
 
 export type ActionFunction<T> = (
@@ -336,4 +339,5 @@ export type AlertProps = {
   ctaLabel?: string;
   primary?: boolean;
   ctaAction?: Action<any>;
+  type?: "SUCCESS" | "FAILED" | "IN_PROGRESS" | "LOADING" | "DEFAULT";
 };
