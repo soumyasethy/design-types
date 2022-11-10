@@ -15,6 +15,7 @@ export type WidgetItem = {
   id: string;
   type: string;
   position?: POSITION;
+  padding?: Padding;
   props?: object;
 };
 
@@ -231,6 +232,15 @@ export enum POSITION {
   /** TODO */
   STICKY_TOP = "position/sticky_top",
 }
+export type Padding = {
+  top?: number;
+  left?: number;
+  right?: number;
+  bottom?: number;
+  horizontal?: number;
+  vertical?: number;
+  all?: number;
+};
 
 /** Type definition for a tap action
  * @param type action type it can either be a custom type or the one of the predefined action types
