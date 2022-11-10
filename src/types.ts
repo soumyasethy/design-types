@@ -313,3 +313,13 @@ export type CallbackWithResult<T> = (
   error?: Error | null,
   result?: T | null
 ) => void;
+
+export type AlertProps = {
+  title?: string;
+  subTitle?: string;
+  message?: string;
+  iconName?: string;
+  ctaLabel?: string;
+  primary?: boolean;
+  ctaAction?: Action<any>;
+};
