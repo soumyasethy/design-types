@@ -141,7 +141,7 @@ export type StandardUtilities = {
   showLoader(routeId: string, widgetItems: WidgetItem[]): void;
   hideLoader(routeId: string): void;
   /** todo **/
-  showPopup(params: any): void;
+  showPopup(params: AlertProps): void;
   /** todo **/
   hidePopup(): void;
   /** todo **/
@@ -178,6 +178,10 @@ export type StandardUtilities = {
   takePicture(routeId: string): Promise<string>;
   galleryPicker(options?: CameraOptions): Promise<ImagePickerResponse>;
   recentFiles(path?: string): Promise<string[]>;
+  handleError(response: {
+    message?: string;
+    statusCode?: string;
+  }): Promise<any>;
 };
 
 export type ActionFunction<T> = (
