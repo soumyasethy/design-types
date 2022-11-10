@@ -179,11 +179,13 @@ export type StandardUtilities = {
   galleryPicker(options?: CameraOptions): Promise<ImagePickerResponse>;
   recentFiles(path?: string): Promise<string[]>;
   handleError(
-    response: {
-      message?: string;
-      statusCode?: string;
-    },
-    customMessage?: { success?: string; failed?: string }
+    response: { message?: string; statusCode?: string },
+    customMessage?: {
+      success?: string;
+      failed?: string;
+      ctaAction?: Action<any>;
+      ctaLabel?: string;
+    }
   ): Promise<any>;
 };
 
