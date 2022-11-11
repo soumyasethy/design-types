@@ -20,7 +20,7 @@
     "build": "tsc",
     "dev": "tsc -w",
     "copy": "sh scripts/copy-dev.sh",
-    "build-copy": "npm run build & npm run copy",
+    "build-copy": "npm run build; npm run copy",
     "version-bump": "npm version patch",
     "publish": "npm publish --access public",
     "npm-set-registry": "npm config set //gitlab.com/api/v4/packages/npm/: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"
