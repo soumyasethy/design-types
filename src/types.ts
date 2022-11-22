@@ -237,6 +237,7 @@ export enum POSITION {
   FIXED_BOTTOM = "position/fixed_bottom",
   /** The  widget is present at the bottom of the page in the default state */
   ABSOLUTE_BOTTOM = "position/absolute_bottom",
+  STICKY_BOTTOM = "position/sticky_bottom",
   /** This is a position specific to FAB widget */
   FAB = "position/fab",
   /** TODO */
