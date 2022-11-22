@@ -168,7 +168,8 @@ export type StandardUtilities = {
   appendWidgets(
     routeId: string,
     datastore: Datastore,
-    widgets: WidgetItem[]
+    widgets: WidgetItem[],
+    appendAfterWidgetId?: string
   ): void;
   removeWidgets(routeId: string, widgets: WidgetItem[]): void;
   cameraPicker(
