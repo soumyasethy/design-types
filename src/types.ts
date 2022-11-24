@@ -66,55 +66,63 @@ export type StandardUtilities = {
       url: string,
       config?: {
         headers?: any;
-      }
+      },
+      callbackBeforeErrorHandle?: () => Promise<void>
     ): Promise<T>;
     post<T = any, D = any>(
       url: string,
       data?: D,
       config?: {
         headers?: any;
-      }
+      },
+      callbackBeforeErrorHandle?: () => Promise<void>
     ): Promise<T>;
     delete<T = any>(
       url: string,
       config?: {
         headers?: any;
-      }
+      },
+      callbackBeforeErrorHandle?: () => Promise<void>
     ): Promise<T>;
     put<T = any, D = any>(
       url: string,
       data?: D,
       config?: {
         headers?: any;
-      }
+      },
+      callbackBeforeErrorHandle?: () => Promise<void>
     ): Promise<T>;
     patch<T = any, D = any>(
       url: string,
       data?: D,
       config?: {
         headers?: any;
-      }
+      },
+      callbackBeforeErrorHandle?: () => Promise<void>
     ): Promise<T>;
     postForm<T = any, D = any>(
       url: string,
       data?: D,
       config?: {
         headers?: any;
-      }
+      },
+      callbackBeforeErrorHandle?: () => Promise<void>
     ): Promise<T>;
     putForm<T = any, D = any>(
       url: string,
       data?: D,
       config?: {
         headers?: any;
-      }
+      },
+      callbackBeforeErrorHandle?: () => Promise<void>
     ): Promise<T>;
     patchForm<T = any, D = any>(
       url: string,
       data?: D,
       config?: {
         headers?: any;
-      }
+      },
+      callbackBeforeErrorHandle?: () => Promise<void>
     ): Promise<T>;
   };
   asyncStorage: {
@@ -180,13 +188,8 @@ export type StandardUtilities = {
   galleryPicker(options?: CameraOptions): Promise<ImagePickerResponse>;
   recentFiles(path?: string): Promise<string[]>;
   handleError(
-    response: { message?: string; statusCode?: string },
-    customMessage?: {
-      success?: string;
-      failed?: string;
-      ctaAction?: Action<any>;
-      ctaLabel?: string;
-    }
+    error: any,
+    callbackBeforeErrorHandle?: () => Promise<void>
   ): Promise<any>;
 };
 
