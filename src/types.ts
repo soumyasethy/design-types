@@ -9,6 +9,8 @@ export type MicroFrontendProps = {
   routeCurrent: string;
   widgetRegistry: WidgetRegistry;
   extraProps?: any;
+  height?: number;
+  width?: number;
 };
 
 export type WidgetItem = {
@@ -27,6 +29,7 @@ export type Layout = {
   id: string;
   type: LAYOUTS;
   widgets: WidgetItem[];
+  isDismissible?: boolean;
 };
 
 export type TemplateSchema = {
@@ -347,4 +350,6 @@ export type AlertProps = {
   primary?: boolean;
   ctaAction?: Action<any>;
   type?: "SUCCESS" | "FAILED" | "IN_PROGRESS" | "LOADING" | "DEFAULT";
+  isAutoTriggerCta?: boolean;
+  autoTriggerTimerInMilliseconds?: number;
 };
