@@ -1,6 +1,6 @@
 {
   "name": "@voltmoney/types",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "This package contains type definitions for @volt/component,@volt/schema, @volt/theme, @volt/platform and @volt/micro-frontend",
   "author": "soumyasethy <soumya.sethy@voltmoney.in>",
   "homepage": "https://github.com/VOLTMoney/design-type#readme",
