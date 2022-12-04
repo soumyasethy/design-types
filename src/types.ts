@@ -64,6 +64,10 @@ export enum GlobalActionTokens {
 }
 
 export type StandardUtilities = {
+  clipboard: {
+    set: (value: string) => void;
+    get: () => Promise<string>;
+  };
   network: {
     get<T = any>(
       url: string,
