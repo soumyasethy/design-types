@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import { Linking } from "react-native";
 
 export type RouteMap = {
   [routeId: string]: PageType<any>;
@@ -64,6 +65,7 @@ export enum GlobalActionTokens {
 }
 
 export type StandardUtilities = {
+  openURL: (url: string) => Promise<void>;
   clipboard: {
     set: (value: string) => void;
     get: () => Promise<string>;
