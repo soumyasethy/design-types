@@ -151,20 +151,24 @@ export type StandardUtilities = {
     clear: (callBack?: () => CallbackWithResult<string> | undefined) => void;
   };
   /** @description navigate to page  **/
-  /** @param routeId as string from RouteMap **/
+  /** @param routeId as string from RouteMap *
+   * @param params will be available in onLoad function's second param as extraProps of Navigation ROUTE ID MicroFrontend.
+   */
   navigate(routeId: string, params?: any): void;
-  /** @description navigate to previous page  **/
+  /** @description navigate to previous page or use in closing any Modal **/
   goBack(): void;
+  /** todo **/
   showLoader(routeId: string, widgetItems: WidgetItem[]): void;
+  /** todo **/
   hideLoader(routeId: string): void;
-  /** todo **/
+  /** @description Open Modal which accepts @AlertProps type **/
   showPopup(params: AlertProps): void;
-  /** todo **/
+  /** @description navigate to previous page or use in closing any Modal **/
   hidePopup(): void;
   /** todo **/
   showToast(toastProps: any): void;
   /** todo **/
-  reloadPage(reloadParams?: any): void;
+  reloadPage(extraProps?: any): void;
 
   /** @description Scroll to Index by passing RouteId and scroll to position as Index in options prop***/
   scrollToIndex(options: ScrollToIdOptions): void;
@@ -189,13 +193,6 @@ export type StandardUtilities = {
     appendAfterWidgetId?: string
   ): void;
   removeWidgets(routeId: string, widgets: WidgetItem[]): void;
-  cameraPicker(
-    options?: CameraOptions,
-    routeId?: string
-  ): Promise<ImagePickerResponse>;
-  takePicture(routeId: string): Promise<string>;
-  galleryPicker(options?: CameraOptions): Promise<ImagePickerResponse>;
-  recentFiles(path?: string): Promise<string[]>;
   handleError(
     error: any,
     callbackBeforeErrorHandle?: () => Promise<void>

@@ -1,6 +1,6 @@
 {
   "name": "@voltmoney/types",
-  "version": "1.0.19",
+  "version": "1.0.21",
   "description": "This package contains type definitions for @volt/component,@volt/schema, @volt/theme, @volt/platform and @volt/micro-frontend",
   "author": "soumyasethy <soumya.sethy@voltmoney.in>",
   "homepage": "https://github.com/VOLTMoney/design-type#readme",
@@ -23,7 +23,8 @@
     "build-copy": "npm run build; npm run copy",
     "version-bump": "npm version patch",
     "publish": "npm publish --access public",
-    "npm-set-registry": "npm config set //gitlab.com/api/v4/packages/npm/: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"
+    "npm-set-registry": "npm config set //gitlab.com/api/v4/packages/npm/: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",
+    "copy-no-code": "sh scripts/copy-no-code.sh"
   },
   "devDependencies": {
     "typescript": "^4.5.5"
