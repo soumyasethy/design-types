@@ -197,6 +197,7 @@ export type StandardUtilities = {
     error: any,
     callbackBeforeErrorHandle?: () => Promise<void>
   ): Promise<any>;
+  openNewTab(url: string): void;
 };
 
 export type ActionFunction<T> = (
