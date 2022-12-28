@@ -49,6 +49,12 @@ export type WidgetProps = {
   renderItem?(item: WidgetItem): ReactNode;
   triggerAction?: TriggerAction;
   action?: Action<any>;
+  metaData?: {
+    widgetId: string;
+    routeId: string;
+    height: number;
+    width: number;
+  };
 };
 
 export enum GlobalActionTokens {
