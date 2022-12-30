@@ -204,8 +204,16 @@ export type StandardUtilities = {
     callbackBeforeErrorHandle?: () => Promise<void>
   ): Promise<any>;
   openNewTab(url: string): void;
+  analytics: (
+    eventId: string,
+    params: { [key in string]: any },
+    eventType?: AnalyticsEventType
+  ) => void;
 };
-
+export enum AnalyticsEventType {
+  PageTracking = "PageTracking",
+  EventTracking = "EventTracking",
+}
 export type ActionFunction<T> = (
   action: Action<T>,
   datastore: Datastore,
