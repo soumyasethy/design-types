@@ -234,6 +234,7 @@ export type PageType<T> = {
   template?: TemplateSchema;
   actions?: ActionMap;
   action?: Action<any>;
+  actionDelay?: number;
   bgColor?: string;
   clearPrevious?: boolean;
 };
