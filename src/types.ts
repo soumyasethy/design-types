@@ -258,6 +258,7 @@ export enum POSITION {
   /** The  widget is present at the top of the page in the default state */
   ABSOLUTE_TOP = "position/absolute_top",
   ABSOLUTE_CENTER = "position/absolute_center",
+  CENTER = "position/center",
   /** The widget is fixed to the bottom of the screen, and continues to appear even when you scroll up */
   FIXED_BOTTOM = "position/fixed_bottom",
   /** The  widget is present at the bottom of the page in the default state */
