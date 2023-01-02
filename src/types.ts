@@ -54,6 +54,8 @@ export type WidgetProps = {
     routeId: string;
     height: number;
     width: number;
+    heightScreen: number;
+    widthScreen: number;
   };
 };
 
