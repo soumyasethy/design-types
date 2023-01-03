@@ -211,6 +211,12 @@ export type StandardUtilities = {
     params: { [key in string]: any },
     eventType?: AnalyticsEventType
   ) => void;
+  digio:{
+    init(): void
+    submit(requestId:string,
+           identifier:string,
+           token_id: string): void
+  }
 };
 export enum AnalyticsEventType {
   PageTracking = "PageTracking",
