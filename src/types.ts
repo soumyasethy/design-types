@@ -217,6 +217,7 @@ export type StandardUtilities = {
            identifier:string,
            token_id: string): void
   }
+  importScript(resourceUrl:string, customFunction?:Function): void
 };
 export enum AnalyticsEventType {
   PageTracking = "PageTracking",
