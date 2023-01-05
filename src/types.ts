@@ -215,7 +215,7 @@ export type StandardUtilities = {
     init(): void
     submit(requestId:string,
            identifier:string,
-           token_id: string): void
+           token_id?: string): void
   }
   importScript(resourceUrl:string,
                customFunction?: ImportScriptCustomCallbackType,
