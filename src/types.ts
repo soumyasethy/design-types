@@ -211,7 +211,24 @@ export type StandardUtilities = {
     params: { [key in string]: any },
     eventType?: AnalyticsEventType
   ) => void;
+  digio:{
+    init(): void
+    submit(requestId:string,
+           identifier:string,
+           token_id?: string): void
+  }
+  importScript(resourceUrl:string,
+               customFunction?: ImportScriptCustomCallbackType,
+               successCb?:(response?: any)=>void,
+               failureCb?:(response?: any)=>void
+  ): void
 };
+
+export type ImportScriptCustomCallbackType = (
+    successCB?: (response?: any)=>void,
+    failureCB?: (response?: any)=>void
+) => any
+
 export enum AnalyticsEventType {
   PageTracking = "PageTracking",
   EventTracking = "EventTracking",
