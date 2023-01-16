@@ -273,6 +273,7 @@ export enum LAYOUTS {
 /** An enum to decide on the positioning of a widget */
 export enum POSITION {
   /** The widget is fixed to the top of the screen, and continues to appear even when you scroll down */
+  BODY = "position/body",
   FIXED_TOP = "position/fixed_top",
   /** The  widget is present at the top of the page in the default state */
   ABSOLUTE_TOP = "position/absolute_top",
