@@ -43,19 +43,24 @@ export type WidgetRegistry = {
     Mock?: { args?: any; argsType?: any };
   };
 };
+export type MetaData = {
+  platform: {
+    OS: string;
+    Version: string | number;
+  };
+  widgetId: string;
+  routeId: string;
+  height: number;
+  width: number;
+  heightScreen: number;
+  widthScreen: number;
+};
 
 export type WidgetProps = {
   renderItem?(item: WidgetItem): ReactNode;
   triggerAction?: TriggerAction;
   action?: Action<any>;
-  metaData?: {
-    widgetId: string;
-    routeId: string;
-    height: number;
-    width: number;
-    heightScreen: number;
-    widthScreen: number;
-  };
+  metaData?: MetaData;
 };
 
 export enum GlobalActionTokens {
@@ -204,7 +209,7 @@ export type StandardUtilities = {
     error: any,
     callbackBeforeErrorHandle?: () => Promise<void>
   ): Promise<any>;
-  openNewTab(url: string): void;
+  openNewTab(url: string, targetType?: OpenNewTabTargetType): void;
   analytics: (
     eventId: string,
     params: { [key in string]: any },
@@ -220,6 +225,7 @@ export type StandardUtilities = {
     successCb?: (response?: any) => void,
     failureCb?: (response?: any) => void
   ): void;
+  metaData: MetaData;
 };
 
 export type ImportScriptCustomCallbackType = (
@@ -391,3 +397,9 @@ export type AlertProps = {
   isAutoTriggerCta?: boolean;
   autoTriggerTimerInMilliseconds?: number;
 };
+export enum OpenNewTabTargetType {
+  blank = "_blank",
+  self = "_self",
+  parent = "_parent",
+  top = "_top",
+}
