@@ -28,6 +28,12 @@ export type Datastore = {
 export type Layout = {
   id: string;
   type: LAYOUTS;
+  style?: {
+    height?: number | string;
+    // backgroundColor?: string;
+    // padding?: Padding;
+    // width?: number;
+  };
   widgets: WidgetItem[];
   isDismissible?: boolean;
 };
@@ -402,4 +408,7 @@ export enum OpenNewTabTargetType {
   self = "_self",
   parent = "_parent",
   top = "_top",
+}
+export enum CONFIG_KEYS {
+  CURRENT_URL_ADDRESS = "url_address",
 }
