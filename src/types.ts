@@ -408,6 +408,7 @@ export enum OpenNewTabTargetType {
   self = "_self",
   parent = "_parent",
   top = "_top",
+  popup = "popup"
 }
 export enum CONFIG_KEYS {
   CURRENT_URL_ADDRESS = "url_address",
