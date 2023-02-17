@@ -215,7 +215,7 @@ export type StandardUtilities = {
     error: any,
     callbackBeforeErrorHandle?: () => Promise<void>
   ): Promise<any>;
-  openNewTab(url: string, targetType?: OpenNewTabTargetType): void;
+  openNewTab(url: string, targetType?: OpenNewTabTargetType, target?:string, width?: number, height?: number): void;
   analytics: (
     eventId: string,
     params: { [key in string]: any },
