@@ -62,7 +62,7 @@ export type MetaData = {
   widthScreen: number;
 };
 
-export type newTabOptions = {
+export type NewTabOptions = {
   target?:string,
   width?: number,
   height?: number
@@ -221,7 +221,7 @@ export type StandardUtilities = {
     error: any,
     callbackBeforeErrorHandle?: () => Promise<void>
   ): Promise<any>;
-  openNewTab(url: string, targetType?: OpenNewTabTargetType, config?: newTabOptions): void;
+  openNewTab(url: string, targetType?: OpenNewTabTargetType, config?: NewTabOptions): void;
   analytics: (
     eventId: string,
     params: { [key in string]: any },
