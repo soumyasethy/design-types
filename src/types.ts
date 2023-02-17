@@ -62,6 +62,12 @@ export type MetaData = {
   widthScreen: number;
 };
 
+export type NewTabConfig = {
+  target?:string,
+  width?: number,
+  height?: number
+}
+
 export type WidgetProps = {
   renderItem?(item: WidgetItem): ReactNode;
   triggerAction?: TriggerAction;
@@ -215,7 +221,7 @@ export type StandardUtilities = {
     error: any,
     callbackBeforeErrorHandle?: () => Promise<void>
   ): Promise<any>;
-  openNewTab(url: string, targetType?: OpenNewTabTargetType): void;
+  openNewTab(url: string, targetType?: OpenNewTabTargetType, config?: NewTabConfig): void;
   analytics: (
     eventId: string,
     params: { [key in string]: any },
