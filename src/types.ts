@@ -284,6 +284,8 @@ export enum LAYOUTS {
   TAB = "layouts/tab",
 
   MODAL = "layout/modal",
+
+
 }
 
 /** An enum to decide on the positioning of a widget */
@@ -304,6 +306,7 @@ export enum POSITION {
   FAB = "position/fab",
   /** TODO */
   STICKY_TOP = "position/sticky_top",
+  NAVBAR = "position/navbar",
 }
 export type Padding = {
   top?: number;
