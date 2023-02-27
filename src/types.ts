@@ -306,7 +306,8 @@ export enum POSITION {
   FAB = "position/fab",
   /** TODO */
   STICKY_TOP = "position/sticky_top",
-  NAVBAR = "position/navbar",
+  NAVBAR_LEFT = "position/navbar_left",
+  NAVBAR_RIGHT = "position/navbar_right"
 }
 export type Padding = {
   top?: number;
