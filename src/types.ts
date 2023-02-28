@@ -25,11 +25,19 @@ export type Datastore = {
   [widgetId in string]: Object;
 };
 
+export enum ModalAlignmentEnum {
+  TOP = 'TOP',
+  BOTTOM = 'BOTTOM',
+  LEFT = 'LEFT',
+  RIGHT = 'RIGHT'
+}
+
 export type Layout = {
   id: string;
   type: LAYOUTS;
   style?: {
     height?: number | string;
+    alignment?: ModalAlignmentEnum;
     // backgroundColor?: string;
     // padding?: Padding;
     // width?: number;
