@@ -47,6 +47,7 @@ export type Layout = {
 };
 
 export type TemplateSchema = {
+  lastUpdatedTimeStamp: number;
   layout: Layout;
   datastore: Datastore;
 };
