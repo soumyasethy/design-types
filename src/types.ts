@@ -421,6 +421,8 @@ export type AlertProps = {
   type?: "SUCCESS" | "FAILED" | "IN_PROGRESS" | "LOADING" | "DEFAULT";
   isAutoTriggerCta?: boolean;
   autoTriggerTimerInMilliseconds?: number;
+  titleFont?: boolean;
+
 };
 export enum OpenNewTabTargetType {
   blank = "_blank",
