@@ -65,6 +65,7 @@ export type MetaData = {
   };
   widgetId: string;
   routeId: string;
+  isRouteFocused?: boolean;
   height: number;
   width: number;
   heightScreen: number;
