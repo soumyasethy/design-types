@@ -55,7 +55,7 @@ export type TemplateSchema = {
 export type WidgetRegistry = {
   [key: string]: {
     Component?: any;
-    Mock?: { args?: any; argsType?: any };
+    Mock?: { args?: any; argTypes?: any };
   };
 };
 export type MetaData = {
